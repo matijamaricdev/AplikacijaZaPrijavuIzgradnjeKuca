@@ -1,0 +1,78 @@
+﻿@model IEnumerable<AplikacijaZaPrijavuOstecenjaSisMosZup.Models.Prijavitelj>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Pogledaj sve prijavitelje</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ime vlasnika tvrtke
+            </th>
+            <th>
+                Prezime vlasnika tvrtke
+            </th>
+            <th>
+                Ime tvrtke
+            </th>
+            <th>
+                Broj godina poslovanja
+            </th>
+            <th>
+                OIB tvrtke
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                Kontakt broj
+            </th>
+            <th>
+                Broj radnika
+            </th>s
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImeVlasnikaTvrtke)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrezimeVlasnikaTvrtke)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImeTvrtke)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojGodinaPoslovanja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OIBTvrtke)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KontaktBroj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojRadnika)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Detalji</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

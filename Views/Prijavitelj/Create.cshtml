@@ -1,0 +1,68 @@
+﻿@model AplikacijaZaPrijavuOstecenjaSisMosZup.Models.Prijavitelj
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<hr />
+<div class="row" style="border: 1px solid grey; padding: 20px; border-radius: 10px;">
+    <div class="col-md-9" style="float:none;margin:auto; text-align: center;">
+        <h1>Prijavi tvrtku</h1>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                Ime vlasnika tvrtke
+                <input asp-for="ImeVlasnikaTvrtke" class="form-control" />
+                <span asp-validation-for="ImeVlasnikaTvrtke" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Prezime vlasnika tvrtke
+                <input asp-for="PrezimeVlasnikaTvrtke" class="form-control" />
+                <span asp-validation-for="PrezimeVlasnikaTvrtke" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Ime tvrtke
+                <input asp-for="ImeTvrtke" class="form-control" />
+                <span asp-validation-for="ImeTvrtke" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Broj godina poslovanja
+                <input asp-for="BrojGodinaPoslovanja" class="form-control" />
+                <span asp-validation-for="BrojGodinaPoslovanja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                OIB tvrtke
+                <input asp-for="OIBTvrtke" class="form-control" />
+                <span asp-validation-for="OIBTvrtke" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Adresa
+                <input asp-for="Adresa" class="form-control" />
+                <span asp-validation-for="Adresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Kontakt e-mail
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Kontakt broj
+                <input asp-for="KontaktBroj" class="form-control" />
+                <span asp-validation-for="KontaktBroj" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Broj radnika
+                <input asp-for="BrojRadnika" class="form-control" />
+                <span asp-validation-for="BrojRadnika" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Kreiraj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

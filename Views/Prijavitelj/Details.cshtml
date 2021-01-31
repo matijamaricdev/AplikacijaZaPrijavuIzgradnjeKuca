@@ -1,0 +1,67 @@
+﻿@model AplikacijaZaPrijavuOstecenjaSisMosZup.Models.Prijavitelj
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalji tvrtke</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Ime vlasnika tvrtke
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ImeVlasnikaTvrtke)
+        </dd>
+        <dt class = "col-sm-2">
+            Prezime vlasnika tvrtke
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrezimeVlasnikaTvrtke)
+        </dd>
+        <dt class = "col-sm-2">
+            Ime tvrtke
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ImeTvrtke)
+        </dd>
+        <dt class = "col-sm-2">
+            Godine poslovanja
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BrojGodinaPoslovanja)
+        </dd>
+        <dt class = "col-sm-2">
+            OIB tvrtke
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OIBTvrtke)
+        </dd>
+        <dt class = "col-sm-2">
+           Adresa
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Adresa)
+        </dd>
+        <dt class = "col-sm-2">
+            Email
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            Kontakt broj
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KontaktBroj)
+        </dd>
+        <dt class = "col-sm-2">
+            Broj radnika
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BrojRadnika)
+        </dd>
+    </dl>
+</div>
