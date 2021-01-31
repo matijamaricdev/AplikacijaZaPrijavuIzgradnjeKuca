@@ -13,6 +13,8 @@ namespace AplikacijaZaPrijavuIzgradnjeKuca.Data
             : base(options)
         {
         }
+        
+        // property for mapping "prijavitelj" object to database table named "Prijavitelj".
         public DbSet<AplikacijaZaPrijavuOstecenjaSisMosZup.Models.Prijavitelj> Prijavitelj { get; set; }
     }
 }
